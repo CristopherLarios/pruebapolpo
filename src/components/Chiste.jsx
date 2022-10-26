@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/styles.css'
 
 function Chiste() {
 
@@ -53,17 +54,16 @@ function Chiste() {
   }
 
   return (
-    <div >
+    <div className='contenedor'>
       <select
         id="tiposchistes"
         onChange={obtenerseleccion}
       >
-
       </select>
       <hr></hr>
-      <button onClick={CargarCategorias}>Cargar categorias</button>
+      <button className="btn" onClick={CargarCategorias}>Cargar categorias</button>
       <hr></hr>
-      <button onClick={CargarChiste}>Cargar Chiste</button>
+      <button className="btn" onClick={CargarChiste}>Cargar Chiste</button>
       <hr></hr>
       <textarea id="impchiste"></textarea>
     </div>
