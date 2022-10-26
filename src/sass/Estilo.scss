@@ -1,3 +1,82 @@
-.btn{
-    background-color: aqua;
+.container {
+  margin: 3rem;
+}
+
+#tiposchistes {
+  width: 25rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 15px;
+}
+
+img {
+  height: 20rem;
+  width: 30rem;
+}
+
+#impchiste {
+  width: 25rem;
+  height: 7rem;
+  margin-left: 15px;
+}
+
+.card {
+  height: 15rem;
+  width: 30rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+.card-body {
+}
+
+.card-title {
+  text-align: center;
+}
+.card-text {
+  text-align: center;
+}
+
+.btn1 {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 0.2rem;
+}
+
+.btn1:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btn1:active {
+  transform: translateY(-1px);
+}
+
+.btn2 {
+  @extend .btn1;
+}
+
+.btn2:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btn2:active {
+  transform: translateY(-1px);
 }
