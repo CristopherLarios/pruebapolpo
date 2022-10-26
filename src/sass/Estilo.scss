@@ -2,12 +2,21 @@
   margin: 3rem;
 }
 
+
+
 #tiposchistes {
   width: 25rem;
   height: 2rem;
   text-align: center;
   font-size: 1rem;
   margin-left: 15px;
+  font-family: sans-serif;
+  color: #444;  
+  line-height: 1.3;
+  box-sizing: border-box;
+  border: 1px solid #23c483;
+  box-shadow: 0 1px 0 1px 23c483;
+  border-radius: .5em;
 }
 
 img {
@@ -28,7 +37,10 @@ img {
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
-.card-body {
+.card:hover {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform: scale(1.05);
 }
 
 .card-title {
