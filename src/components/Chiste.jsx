@@ -13,7 +13,7 @@ function Chiste() {
       setCategoria(data);
     }
     traercategorias();
-    CargarCategorias();
+   
   }, [])
   
 
@@ -45,10 +45,7 @@ function Chiste() {
 
   }
 
-  function limptextarea() {
-    document.getElementById("impchiste").innerHTML = " ";
-    
-  }
+ 
 
   const [cat, setCat] = useState("dev");
   function obtenerseleccion(event) {
@@ -61,27 +58,12 @@ function Chiste() {
         id="tiposchistes"
         onChange={obtenerseleccion}
       >
-        {/* <option>animal</option>
-        <option>career</option>
-        <option>celebrity</option>
-        <option>dev</option>
-        <option>explicit</option>
-        <option>fashion</option>
-        <option>food</option>
-        <option>history</option>
-        <option>money</option>
-        <option>movie</option>
-        <option>music</option>
-        <option>political</option>
-        <option>religion</option>
-        <option>science</option>
-        <option>sport</option>
-        <option>travel</option> */}
+
       </select>
       <hr></hr>
-      <button onClick={CargarChiste}>Cargar Chiste</button>
+      <button onClick={CargarCategorias}>Cargar categorias</button>
       <hr></hr>
-      <button onClick={limptextarea}>Limpiar Chiste</button>
+      <button onClick={CargarChiste}>Cargar Chiste</button>
       <hr></hr>
       <textarea id="impchiste"></textarea>
     </div>
