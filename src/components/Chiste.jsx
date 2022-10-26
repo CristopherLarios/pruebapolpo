@@ -5,94 +5,63 @@ function Chiste() {
   /*
   *Cargar en una lista todas las categorias
   */
-  // const [categoria, setCategoria] = useState();
+  const [categoria, setCategoria] = useState();
+  useEffect(() => {
+    async function traercategorias() {
+      const response = await fetch(`https://api.chucknorris.io/jokes/categories`)
+      const data = await response.json()
+      setCategoria(data);
+    }
+    traercategorias();
+    CargarCategorias();
+  }, [])
+  
 
-  // useEffect(() => {
-  //   async function traercategorias() {
-  //     const response = await fetch(`https://api.chucknorris.io/jokes/categories`)
-  //     const data = await response.json()
-  //   setCategoria(data);
-  //   console.log(categoria)
-  //   }
-  //   traercategorias();
-  // },[])
-
-  // const array=[];
-  // for (const i in categoriachiste) {
-  //   array.push(categoriachiste[i].name);
-  // }
-
-  // function cargar_tipo_Chiste() {
-
-  //   addOptions("tiposchistes", array);
-  // }
-  // function addOptions(domElement, array) {
-  //   var select = document.getElementsByName(domElement);
-
-  //   for (const i in array) {
-  //     var option = document.createElement("option");
-  //     option.text = array[i];
-  //     select.add(option);
-  //   }
-
-  // }
-  // cargar_tipo_Chiste();
-
-  /*
-  *C=================================
-  */
-
-  /*
-    *trer categoria seleccionada
-    */
-
-
-
-  /*
-  *cargar el chiste
-  */
-
-
+  function CargarCategorias() {
+    const select = document.getElementById("tiposchistes");
+    for (let i = 0; i < categoria.length; i++) {
+      let opt = document.createElement("option");
+      opt.value = categoria[i];
+      opt.innerHTML = categoria[i];
+      select.add(opt);
+    } 
+  }
 
 
   const [chiste, setChiste] = useState();
-
   useEffect(() => {
     async function traerchiste(cat) {
       const response = await fetch(`https://api.chucknorris.io/jokes/random?category=${cat}`)
       const data = await response.json()
       setChiste(data.value);
-      // console.log(chiste)
+
     }
 
     traerchiste(cat);
   })
 
   function CargarChiste() {
-    document.getElementById("impchiste").innerHTML = chiste ;
-    
+    document.getElementById("impchiste").innerHTML = chiste;
 
   }
 
   function limptextarea() {
     document.getElementById("impchiste").innerHTML = " ";
+    
   }
 
   const [cat, setCat] = useState("dev");
   function obtenerseleccion(event) {
-   setCat(event.target.options[event.target.selectedIndex].text); 
+    setCat(event.target.options[event.target.selectedIndex].text);
   }
 
-  //  var op = document.getElementsByName("tiposchistes").text;
-  //   console.log(op+" hoa")
-
   return (
-    <div>
+    <div >
       <select
-        name="tiposchistes"
+        id="tiposchistes"
         onChange={obtenerseleccion}
       >
-        <option>animal</option>
+        {/* <option>animal</option>
         <option>career</option>
         <option>celebrity</option>
         <option>dev</option>
@@ -107,7 +76,7 @@ function Chiste() {
         <option>religion</option>
         <option>science</option>
         <option>sport</option>
-        <option>travel</option>
+        <option>travel</option> */}
       </select>
       <hr></hr>
       <button onClick={CargarChiste}>Cargar Chiste</button>
@@ -117,6 +86,9 @@ function Chiste() {
       <textarea id="impchiste"></textarea>
     </div>
   );
+
+
+
 }
 
 
