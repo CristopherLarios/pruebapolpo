@@ -79,17 +79,37 @@ img {
   transform: translateY(-1px);
 }
 
-// .btn2 {
-//   @extend .btn1;
-// }
+.rating {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
 
-// .btn2:hover {
-//   background-color: #23c483;
-//   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-//   color: #fff;
-//   transform: translateY(-7px);
-// }
+  flex-direction: row-reverse;
+}
 
-// .btn2:active {
-//   transform: translateY(-1px);
-// }
+.rating__star:hover,
+.rating__star:hover ~ .rating__star {
+  color: transparent;
+}
+
+/*
+Make all previous stars selected when hover on a star
+Note that we use \`flex-direction: row-reverse\` on the container
+*/
+.rating__star:hover:before,
+.rating__star:hover ~ .rating__star:before {
+  color: #23c483;
+  content: '★';
+  left: 0;
+  position: absolute;
+}
+
+.rating__star {
+  font-size: 3rem;
+  background-color: transparent;
+  border: transparent;
+  margin: 0 2px;
+  padding: 0;
+  position: relative;
+}

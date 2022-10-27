@@ -22,28 +22,28 @@ function Chiste() {
 
   }, [])
 
-/*
-  *Creamos los option a partir de todas las categorias
-  *Verificamos si esta vacio y creamos los componentes
-  *de lo contrario no se cargan 
-  *esta funcion es llamada en el oneclick del select
-  */
+  /*
+    *Creamos los option a partir de todas las categorias
+    *Verificamos si esta vacio y creamos los componentes
+    *de lo contrario no se cargan 
+    *esta funcion es llamada en el oneclick del select
+    */
   function CargarCategorias() {
     const select = document.getElementById("tiposchistes");
     if (select.length === 0) {
-      console.log("cargar "+select.size);
+      console.log("cargar " + select.size);
       categoria.map((num) => {
         let opt = document.createElement("option");
         opt.value = num;
         opt.innerHTML = num;
         select.add(opt);
       });
-    } 
+    }
   }
 
-/*
-  *Obtenemos un chiste a partir de la categoria seleccionada en el select
-  */
+  /*
+    *Obtenemos un chiste a partir de la categoria seleccionada en el select
+    */
   const [chiste, setChiste] = useState();
   useEffect(() => {
     async function traerchiste(cat) {
@@ -63,9 +63,9 @@ function Chiste() {
   }
 
 
-/*
-  *obtenemos la cayegoria seleccionada con esta funcion que es llamada en el oneChange
-  */
+  /*
+    *obtenemos la cayegoria seleccionada con esta funcion que es llamada en el oneChange
+    */
   const [cat, setCat] = useState("dev");
   function obtenerseleccion(event) {
     setCat(event.target.options[event.target.selectedIndex].text);
@@ -85,9 +85,9 @@ function Chiste() {
           <hr></hr>
           {/* <button className="btn1" onClick={CargarCategorias}>Cargar categorias</button> */}
           <div className='container'>
-          <button className="btn1" onClick={CargarChiste}>Cargar Chiste</button>
+            <button className="btn1" onClick={CargarChiste}>Cargar Chiste</button>
           </div>
-          
+
           <hr></hr>
           <select
             id="tiposchistes"
@@ -98,6 +98,16 @@ function Chiste() {
           </select>
           <hr></hr>
           <textarea className='textchiste' id="impchiste"></textarea>
+
+          <div className='container card-footer'>
+            <div class="rating">
+              <button class="rating__star">☆</button>
+              <button class="rating__star">☆</button>
+              <button class="rating__star">☆</button>
+              <button class="rating__star">☆</button>
+              <button class="rating__star">★</button>
+            </div>
+          </div>
 
         </div>
 

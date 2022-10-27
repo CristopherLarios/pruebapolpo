@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   margin: 1rem;
 }
@@ -78,6 +79,40 @@ img {
 
 .btn1:active {
   transform: translateY(-1px);
+}
+
+.rating {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.rating__star:hover,
+.rating__star:hover ~ .rating__star {
+  color: transparent;
+}
+
+/*
+Make all previous stars selected when hover on a star
+Note that we use \`flex-direction: row-reverse\` on the container
+*/
+.rating__star:hover:before,
+.rating__star:hover ~ .rating__star:before {
+  color: #23c483;
+  content: "★";
+  left: 0;
+  position: absolute;
+}
+
+.rating__star {
+  font-size: 3rem;
+  background-color: transparent;
+  border: transparent;
+  margin: 0 2px;
+  padding: 0;
+  position: relative;
 }
 
 /*# sourceMappingURL=styles.css.map */
