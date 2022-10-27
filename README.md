@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+MI nombre es Cristopher Larios, soy de Nicaragua, Para este proyecto de prueba utilice la herramientas react,Boostrap para posicionar un poco y Sass para los estilos en CSS, pero no utilice el Boilerplate que nos proporcionaron.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Antes de iniciar con la explicacion de lo que realice en esta prueba, el dia de la entrevista me solicitaron sinceridad y en referencia a eso tengo que mencionar que tengo 3 meses en un bootcamp aprendiendo sobre desarrollo web HTML,CSS,JavaScript,Boostrap,Sass y apenas estaba iniciando el curso de React. lo cual es algo nuevo para mi. justamente hoy se cumplen 5 dias desde que mandaron la prueba y todo lo que implemente lo fui aprendiendo en el camino.
 
-## Available Scripts
+Tengo basaes solidas de programacion en Java,C# y sql. impoarto clases de logica de programacion en mi tiempo libre a estudiantes de primer año, pero mi conocmiento en la web es inicial.
 
-In the project directory, you can run:
+trabajo a diario en mejorar mi codigo y actualizarme cada vez mas, pero lo menciono porque no tengo experiencia en los entornos de un equipo de desarrollo y captura de datos con api ni con traer datos de una base de datos. pero se que con tiempo puedo adquirir el conocimiento y habilidades necesarias para cumplir con las tareas y objetivos que me proponga.
 
-### `npm start`
+sin mas que agregar hare una breve descripcion del trabajo que realice en esta prueba:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1- Lo primero que hice es conocer el entorno react ya que es primera vez que lo utilizo y me di a la tarea de entender un poco su estructura de cambios de componentes,para reutilizar codigo y cree el proyecto desde 0 ya que se me dificulto entender la estructura del que me brindaban.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2-despues de tener la estructura de mi proyecto pase a la captura de datos y como capturar datos de una API y traerlos al proyecto.
 
-### `npm test`
+3-ya cuando tenia los datos y pude interactuar con ellos, arme la estructura del componente chiste(es importante mencionar que creo que no son las mejores practicas que implemente porque tengo que crear jsx por cada componente y despues poderlo reutilizar o cambiar sus estados)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4-ya cuando tenia la estructura, empece a montar los datos a cada componente y armar las interacciones(tuve dificultad en la parte de los chistes y interactuar con los componentes HTML para obtener valores y cargar los valores)
 
-### `npm run build`
+5- logre obtener una estructura de datos estable y una estructura de componentes que interactuavan correctamente con los datos por lo cual realice testing para identificar si habia un bug
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6-luego de concretar la estructura estable y que todo funcionaba correctamente empece a estilear los componentes ya creados pero en el camino seguia testeando y reparando errores que se me presentaban.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+sin mas esa fue mi experiencia con esta prueba y a la espera dse sus comentarios, me despido.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+agradeciendo su amable atencion y tiempo.
