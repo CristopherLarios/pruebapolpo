@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import '../styles/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import imagen1 from '../asset/imagen1.png'
-
+/*
+  *Importamos los estilos y los hook
+  */
 
 function Chiste() {
 
   /*
-  *Cargar en una lista todas las categorias
+  *Traemos todas las categorias desde la api
   */
   const [categoria, setCategoria] = useState();
   useEffect(() => {
@@ -20,7 +22,12 @@ function Chiste() {
 
   }, [])
 
-
+/*
+  *Creamos los option a partir de todas las categorias
+  *Verificamos si esta vacio y creamos los componentes
+  *de lo contrario no se cargan 
+  *esta funcion es llamada en el oneclick del select
+  */
   function CargarCategorias() {
     const select = document.getElementById("tiposchistes");
     if (select.length === 0) {
@@ -31,12 +38,12 @@ function Chiste() {
         opt.innerHTML = num;
         select.add(opt);
       });
-    } else {
-      console.log("No cargar "+select.size);
-    }
+    } 
   }
 
-
+/*
+  *Obtenemos un chiste a partir de la categoria seleccionada en el select
+  */
   const [chiste, setChiste] = useState();
   useEffect(() => {
     async function traerchiste(cat) {
@@ -48,17 +55,25 @@ function Chiste() {
     traerchiste(cat);
   })
 
+  /*
+  *Cargar en el textArea el chiste que obtuvimos desde la API
+  */
   function CargarChiste() {
     document.getElementById("impchiste").innerHTML = chiste;
   }
 
 
-
+/*
+  *obtenemos la cayegoria seleccionada con esta funcion que es llamada en el oneChange
+  */
   const [cat, setCat] = useState("dev");
   function obtenerseleccion(event) {
     setCat(event.target.options[event.target.selectedIndex].text);
   }
 
+  /*
+  *Retornamos el componente a app.js
+  */
   return (
     <div className='container d-flex justify-content-center align-items-center' >
 
