@@ -2,8 +2,6 @@
   margin: 3rem;
 }
 
-
-
 #tiposchistes {
   width: 25rem;
   height: 2rem;
@@ -28,6 +26,8 @@ img {
   width: 25rem;
   height: 7rem;
   margin-left: 15px;
+  border-radius: 15px;
+  box-shadow:0 0 10px #23c483;
 }
 
 .card {
@@ -35,7 +35,7 @@ img {
   width: 30rem;
   border-radius: 30px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 10px 10px 20px #23c483, -10px -10px 20px #23c483;
 }
 .card:hover {
   border-bottom-right-radius: 50px;
