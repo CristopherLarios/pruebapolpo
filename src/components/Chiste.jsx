@@ -15,7 +15,6 @@ function Chiste() {
       const response = await fetch(`https://api.chucknorris.io/jokes/categories`)
       const data = await response.json()
       setCategoria(data);
-      
     }
     traercategorias();
 
@@ -23,13 +22,17 @@ function Chiste() {
 
 
   function CargarCategorias() {
-    
     const select = document.getElementById("tiposchistes");
-    for (let i = 0; i < categoria.length; i++) {
-      let opt = document.createElement("option");
-      opt.value = categoria[i];
-      opt.innerHTML = categoria[i];
-      select.add(opt);
+    if (select.length === 0) {
+      console.log("cargar "+select.size);
+      categoria.map((num) => {
+        let opt = document.createElement("option");
+        opt.value = num;
+        opt.innerHTML = num;
+        select.add(opt);
+      });
+    } else {
+      console.log("No cargar "+select.size);
     }
   }
 
@@ -65,12 +68,16 @@ function Chiste() {
           <h1 className='card-title'>Chistes Chuck Norris</h1>
           <p className='card-text'>Cargue y seleccione las diferentes categorias</p>
           <hr></hr>
-          <button className="btn1" onClick={CargarCategorias}>Cargar categorias</button>
-          <button className="btn2" onClick={CargarChiste}>Cargar Chiste</button>
+          {/* <button className="btn1" onClick={CargarCategorias}>Cargar categorias</button> */}
+          <div className='container'>
+          <button className="btn1" onClick={CargarChiste}>Cargar Chiste</button>
+          </div>
+          
           <hr></hr>
           <select
             id="tiposchistes"
             onChange={obtenerseleccion}
+            onClick={CargarCategorias}
             className=''
           >
           </select>
