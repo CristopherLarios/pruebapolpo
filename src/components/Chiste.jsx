@@ -14,7 +14,7 @@ function Chiste() {
   const [categoria, setCategoria] = useState();
   useEffect(() => {
     async function traercategorias() {
-      const response = await fetch(`https://api.chucknorris.io/jokes/categories`)
+      const response = await fetch("https://api.chucknorris.io/jokes/categories")
       const data = await response.json()
       setCategoria(data);
     }
