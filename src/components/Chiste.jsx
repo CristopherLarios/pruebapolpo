@@ -78,26 +78,25 @@ function Chiste() {
     <div className='container d-flex justify-content-center align-items-center' >
 
       <div className='card bg-secondary text-white align-items-center'>
-        <img className='img' src={imagen1} alt="imgprincipal"></img>
+        <img className='img' src={imagen1} alt="imgprincipal" />
         <div className='card-body align-items-center'>
           <h1 className='card-title'>Chistes Chuck Norris</h1>
           <p className='card-text'>Cargue y seleccione las diferentes categorias</p>
-          <hr></hr>
+          <hr />
           {/* <button className="btn1" onClick={CargarCategorias}>Cargar categorias</button> */}
           <div className='container'>
           <button className="btn1" onClick={CargarChiste}>Cargar Chiste</button>
           </div>
           
-          <hr></hr>
+          <hr />
           <select
             id="tiposchistes"
             onChange={obtenerseleccion}
             onClick={CargarCategorias}
             className=''
-          >
-          </select>
-          <hr></hr>
-          <textarea className='textchiste' id="impchiste"></textarea>
+           />
+          <hr />
+          <textarea className='textchiste' id="impchiste" />
 
         </div>
 
